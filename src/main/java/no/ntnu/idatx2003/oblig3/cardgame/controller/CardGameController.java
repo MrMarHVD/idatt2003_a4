@@ -23,6 +23,9 @@ public class CardGameController {
     this.attachButtonHandlers();
   }
 
+  /**
+   * Attach the button handlers for the UI.
+   */
   private void attachButtonHandlers() {
     ui.getDealHand().setOnAction(event -> playerHand = deck.dealHand(5));
     ui.getCheckHand().setOnAction(event -> ui.getDisplayManager().displayHand(playerHand));

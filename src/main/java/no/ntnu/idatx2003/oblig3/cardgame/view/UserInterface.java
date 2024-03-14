@@ -12,8 +12,10 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import no.ntnu.idatx2003.oblig3.cardgame.controller.CardGameController;
 import no.ntnu.idatx2003.oblig3.cardgame.controller.DisplayManager;
 import javafx.scene.control.Separator;
+import no.ntnu.idatx2003.oblig3.cardgame.model.DeckOfCards;
 
 /**
  * Class representing the user interface for the card game.
@@ -29,6 +31,11 @@ public class UserInterface extends Application {
    * Display Manager for this user interface.
    */
   private DisplayManager displayManager;
+
+  /**
+   * The card game controller for this user interface.
+   */
+  private CardGameController controller;
 
   /**
    * The VBox containing the entire UI.
@@ -100,6 +107,8 @@ public class UserInterface extends Application {
     primaryStage.setTitle("Card Game");
 
     this.createUI();
+    this.controller = new CardGameController(this, new DeckOfCards());
+    this.displayManager = new DisplayManager(this);
 
     primaryStage.setScene(scene);
     primaryStage.show();
@@ -206,6 +215,7 @@ public class UserInterface extends Application {
 
   /**
    * Get the faces sum label.
+   *
    * @return the faces sum label
    */
   public Label getFacesSumLabel() {
@@ -214,6 +224,7 @@ public class UserInterface extends Application {
 
   /**
    * Get the cards of hearts label.
+   *
    * @return the cards of hearts label
    */
   public Label getCardsOfHearts() {
@@ -222,6 +233,7 @@ public class UserInterface extends Application {
 
   /**
    * Get the flush label.
+   *
    * @return the flush label
    */
   public Label getFlush() {
@@ -230,6 +242,7 @@ public class UserInterface extends Application {
 
   /**
    * Get the queen of spades label.
+   *
    * @return the queen of spades label
    */
   public Label getQueenOfSpades() {
@@ -238,6 +251,7 @@ public class UserInterface extends Application {
 
   /**
    * Get the deal hand button.
+   *
    * @return the deal hand button
    */
   public Button getDealHand() {
@@ -246,6 +260,7 @@ public class UserInterface extends Application {
 
   /**
    * Get the check hand button.
+   *
    * @return the check hand button
    */
   public Button getCheckHand() {

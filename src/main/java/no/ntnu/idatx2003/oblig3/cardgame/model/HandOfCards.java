@@ -56,6 +56,15 @@ public class HandOfCards {
   }
 
   /**
+   * Get the cards in the hand.
+   *
+   * @return the cards in the hand
+   */
+  public ArrayList<PlayingCard> getCards() {
+    return new ArrayList<>(cards);
+  }
+
+  /**
    * Check if the hand contains a specific card.
    *
    * @param card the card to check for.

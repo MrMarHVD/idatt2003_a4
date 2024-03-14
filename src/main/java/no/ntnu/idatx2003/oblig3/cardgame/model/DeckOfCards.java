@@ -22,7 +22,7 @@ public class DeckOfCards {
   /**
    * The cards in the deck.
    */
-  private final ArrayList<PlayingCard> cards;
+  private ArrayList<PlayingCard> cards;
 
   /**
    * Default constructor. Creates a full deck of playing cards.
@@ -38,20 +38,22 @@ public class DeckOfCards {
 
   /**
    * Deals a random hand of n cards.
+   *
    * @param n number of cards in the hand.
    * @return the resulting collection of cards.
    */
   public HandOfCards dealHand(int n) {
     Collection<PlayingCard> hand = new ArrayList<PlayingCard>();
+    ArrayList<PlayingCard> temp = new ArrayList<>(cards); // Temporary copy of the deck
     Random rand = new Random();
-
+    int bound = 52;
     // Deal n cards
     for (int i = 0; i < n; i++) {
-      int randomNumber = rand.nextInt(52);
+      int randomNumber = rand.nextInt(bound - i);
       hand.add(cards.get(randomNumber));
       cards.remove(randomNumber);
     }
-
+    cards = temp; // Return the deck to its original state
     return new HandOfCards(hand);
   }
 
