@@ -7,29 +7,80 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import no.ntnu.idatx2003.oblig3.cardgame.controller.DisplayManager;
 
 /**
  * Class representing the user interface for the card game.
  */
 public class UserInterface extends Application {
 
-  VBox cardDisplay;
+  /**
+   * Display Manager for this user interface.
+   */
+  private DisplayManager displayManager;
 
-  GridPane cardPane;
+  /**
+   * The VBox containing the entire UI.
+   */
+  private VBox UiDisplay;
 
-  TextField facesSum;
+  /**
+   * The outer VBox containing the gridpane showing the cards.
+   */
+  private VBox cardDisplay;
 
-  TextField cardsOfHearts;
+  /**
+   * The gridpane for displaying images of cards.
+   */
+  private GridPane cardPane;
 
-  Label flush;
+  /**
+   * The HBox containing the lower part of the UI.
+   */
+  private HBox lowerDisplay;
 
-  Label queenOfSpades;
+  /**
+   * The HBox containing the componends in the lower left.
+   */
+  private HBox lowerLeftDisplay;
 
-  Button dealHand;
+  /**
+   * The VBox containing the components in the lower right.
+   */
+  private VBox lowerRightDisplay;
 
-  Button checkHand;
+  /**
+   * The Label for displaying the sum of the faces of the cards.
+   */
+  private Label facesSum;
+
+  /**
+   * The label for displaying the cards which are hearts.
+   */
+  private Label cardsOfHearts;
+
+  /**
+   * The Label for displaying if the hand is a flush or not.
+   */
+  private Label flush;
+
+  /**
+   * The Label for displaying if the hand contains the queen of spades or not.
+   */
+  private Label queenOfSpades;
+
+  /**
+   * The Button to deal a hand.
+   */
+  private Button dealHand;
+
+  /**
+   * The Button to check the hand.
+   */
+  private Button checkHand;
 
 
   /**
@@ -40,15 +91,8 @@ public class UserInterface extends Application {
   public void start(Stage primaryStage) {
     primaryStage.setTitle("Card Game");
 
-    TextField textField = new TextField();
-    Button button = new Button("Click me");
-    Label label = new Label("Display");
-
-    VBox vbox = new VBox(textField, button, label);
-
-    int sceneWidth = 900;
-    int sceneHeight = 600;
-    Scene scene = new Scene(vbox, sceneWidth, sceneHeight);
+    this.createUI();
+    Scene scene = new Scene(UiDisplay, 800, 600);
 
     primaryStage.setScene(scene);
     primaryStage.show();
@@ -67,22 +111,18 @@ public class UserInterface extends Application {
    * Create and set the bounds and properties of the UI.
    */
   private void createUI() {
-    facesSum = new TextField();
-    cardsOfHearts = new TextField();
-    flush = new Label("-fx-padding: 10;" +
-                        "-fx-border-style: solid inside;" +
-                        "-fx-border-width: 2;" +
-                        "-fx-border-insets: 5;" +
-                        "-fx-border-radius: 5;" +
-                        "-fx-border-color: blue;");
-    queenOfSpades = new Label("-fx-padding: 10;" +
-                        "-fx-border-style: solid inside;" +
-                        "-fx-border-width: 2;" +
-                        "-fx-border-insets: 5;" +
-                        "-fx-border-radius: 5;" +
-                        "-fx-border-color: blue;");
+    facesSum = new Label("25");
+    cardsOfHearts = new Label("H1");
+    flush = new Label("No");
+    queenOfSpades = new Label("No");
     dealHand = new Button("Deal Hand");
     checkHand = new Button("Check Hand");
+    cardPane = new GridPane();
+    cardDisplay = new VBox(cardPane);
+    lowerLeftDisplay = new HBox(facesSum, cardsOfHearts, flush, queenOfSpades);
+    lowerRightDisplay = new VBox(dealHand, checkHand);
+    lowerDisplay =  new HBox(lowerLeftDisplay, lowerRightDisplay);
+    UiDisplay = new VBox(cardDisplay, lowerDisplay);
   }
 
 
