@@ -9,10 +9,19 @@ import java.util.Random;
  */
 public class DeckOfCards {
 
+  /**
+   * The possible card suits.
+   */
   private final char[] suit = {'S', 'H', 'D', 'C'};
 
+  /**
+   * The possible card numbers.
+   */
   private final int[] face = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
 
+  /**
+   * The cards in the deck.
+   */
   private final ArrayList<PlayingCard> cards;
 
   /**
