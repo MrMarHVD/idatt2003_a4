@@ -88,6 +88,11 @@ public class UserInterface extends Application {
   private Label queenOfSpades;
 
   /**
+   * Size of the next hand to deal.
+   */
+  private TextField handSize;
+
+  /**
    * The Button to deal a hand.
    */
   private Button dealHand;
@@ -156,18 +161,23 @@ public class UserInterface extends Application {
 
     // Other components
     dealHand = new Button("Deal Hand");
+    handSize = new TextField("Hand Size");
+    VBox handBox = new VBox(handSize, dealHand);
+
     checkHand = new Button("Check Hand");
     cardPane = new GridPane();
     cardDisplay = new VBox(cardPane);
     lowerLeftDisplay = new HBox(facesSumBox, cardsOfHeartsBox, flushBox, queenOfSpadesBox);
-    lowerRightDisplay = new VBox(dealHand, checkHand);
+    lowerRightDisplay = new VBox(handBox, checkHand);
     Separator lowerSeparator = new Separator();
+    Separator upperSeparator = new Separator();
     lowerSeparator.setOrientation(Orientation.VERTICAL);
+    upperSeparator.setOrientation(Orientation.HORIZONTAL);
     lowerDisplay =  new HBox(lowerLeftDisplay, lowerSeparator, lowerRightDisplay);
-    UiDisplay = new VBox(cardDisplay, lowerDisplay);
+    UiDisplay = new VBox(cardDisplay, upperSeparator, lowerDisplay);
 
     // Initialise the scene
-    scene = new Scene(UiDisplay, 900, 700);
+    scene = new Scene(UiDisplay, 1200, 700);
 
     /* Set properties for the components */
     cardDisplay.prefHeightProperty().bind(scene.heightProperty().multiply(0.6));
@@ -190,6 +200,10 @@ public class UserInterface extends Application {
     cardsOfHeartsLabel.setStyle(outlineStyle + fontSize);
     flushLabel.setStyle(outlineStyle + fontSize);
     queenOfSpadesLabel.setStyle(outlineStyle + fontSize);
+
+    // Set gaps and spacing
+    cardPane.setHgap(cardPane.widthProperty().multiply(0.1).doubleValue());
+    cardPane.setVgap(cardPane.heightProperty().multiply(0.1).doubleValue());
 
     lowerLeftDisplay.setSpacing(scene.widthProperty().multiply(0.1).doubleValue());
     lowerRightDisplay.setSpacing(scene.heightProperty().multiply(0.1).doubleValue());
@@ -256,6 +270,15 @@ public class UserInterface extends Application {
    */
   public Button getDealHand() {
     return dealHand;
+  }
+
+  /**
+   * Get the hand size,
+   *
+   * @return the hand size
+   */
+  public String getHandSize() {
+    return handSize.getText();
   }
 
   /**

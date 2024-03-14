@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0a9374d9-be2c-49df-a36b-1c2c135e4a02" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/idatx2003/oblig3/cardgame/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/idatx2003/oblig3/cardgame/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/idatx2003/oblig3/cardgame/controller/CardGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/idatx2003/oblig3/cardgame/controller/CardGameController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/idatx2003/oblig3/cardgame/controller/DisplayManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/idatx2003/oblig3/cardgame/controller/DisplayManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/idatx2003/oblig3/cardgame/model/DeckOfCards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/idatx2003/oblig3/cardgame/model/DeckOfCards.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/idatx2003/oblig3/cardgame/model/HandOfCards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/idatx2003/oblig3/cardgame/model/HandOfCards.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/idatx2003/oblig3/cardgame/view/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/idatx2003/oblig3/cardgame/view/UserInterface.java" afterDir="false" />
     </list>
@@ -102,7 +100,7 @@
       <workItem from="1709812030888" duration="3730000" />
       <workItem from="1710407798676" duration="1160000" />
       <workItem from="1710408965800" duration="298000" />
-      <workItem from="1710409269281" duration="12686000" />
+      <workItem from="1710409269281" duration="15160000" />
     </task>
     <servers />
   </component>

@@ -27,7 +27,17 @@ public class CardGameController {
    * Attach the button handlers for the UI.
    */
   private void attachButtonHandlers() {
-    ui.getDealHand().setOnAction(event -> playerHand = deck.dealHand(5));
+    ui.getDealHand().setOnAction(event -> {
+        try {
+          int handSize = Integer.parseInt(ui.getHandSize());
+          if (handSize <= 0) {
+            throw new IllegalArgumentException("Hand size must be greater than 0.");
+          }
+          playerHand = deck.dealHand(handSize);
+        } catch (Exception e) {
+          ui.getDisplayManager().displayError(e); // Display an error dialogue in the interface
+    };
+  });
     ui.getCheckHand().setOnAction(event -> ui.getDisplayManager().displayHand(playerHand));
   }
 

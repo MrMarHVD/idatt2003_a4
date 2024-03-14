@@ -1,6 +1,7 @@
 package no.ntnu.idatx2003.oblig3.cardgame.controller;
 
 import java.util.stream.IntStream;
+import javafx.scene.control.Alert;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import no.ntnu.idatx2003.oblig3.cardgame.model.HandOfCards;
@@ -37,6 +38,32 @@ public class DisplayManager {
       imageView.setPreserveRatio(true);
       ui.getCardPane().add(imageView, i % 5, i / 5); // Add the ImageView to the GridPane
     });
+
+    if (hand.checkFlush()) {
+      ui.getFlush().setText("Yes");
+    } else {
+      ui.getFlush().setText("No");
+    }
+
+    ui.getFacesSumLabel().setText("" + hand.getSumOfFaces());
+    ui.getCardsOfHearts().setText("" + hand.getHearts());
+
+    if (hand.containsCard('S', 12)) {
+      ui.getQueenOfSpades().setText("Yes");
+    }
+    else {
+      ui.getQueenOfSpades().setText("No");
+    }
+
+  }
+
+  public void displayError(Exception e) {
+    Alert alert = new Alert(Alert.AlertType.ERROR);
+    alert.setTitle("Error");
+    alert.setHeaderText("An error occurred");
+    alert.setHeaderText(null);
+    alert.setContentText(e.getMessage());
+    alert.showAndWait();
   }
 
 }

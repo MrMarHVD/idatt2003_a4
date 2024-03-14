@@ -67,10 +67,9 @@ public class HandOfCards {
   /**
    * Check if the hand contains a specific card.
    *
-   * @param card the card to check for.
    * @return the truth value.
    */
-  public boolean containsCard(PlayingCard card) {
-    return cards.contains(card);
+  public boolean containsCard(char suit, int face) {
+    return cards.stream().anyMatch(card -> card.getSuit() == suit && card.getFace() == face);
   }
 }
