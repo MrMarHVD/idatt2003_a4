@@ -158,7 +158,7 @@ public class UserInterface extends Application {
     UiDisplay = new VBox(cardDisplay, lowerDisplay);
 
     // Initialise the scene
-    scene = new Scene(UiDisplay, 800, 600);
+    scene = new Scene(UiDisplay, 900, 700);
 
     /* Set properties for the components */
     cardDisplay.prefHeightProperty().bind(scene.heightProperty().multiply(0.6));
@@ -184,6 +184,72 @@ public class UserInterface extends Application {
 
     lowerLeftDisplay.setSpacing(scene.widthProperty().multiply(0.1).doubleValue());
     lowerRightDisplay.setSpacing(scene.heightProperty().multiply(0.1).doubleValue());
+  }
+
+  /**
+   * Get the display manager.
+   *
+   * @return the display manager
+   */
+  public DisplayManager getDisplayManager() {
+    return displayManager;
+  }
+
+  /**
+   * Get the gridpane for displaying the cards.
+   *
+   * @return the gridpane for displaying the cards
+   */
+  public GridPane getCardPane() {
+    return cardPane;
+  }
+
+  /**
+   * Get the faces sum label.
+   * @return the faces sum label
+   */
+  public Label getFacesSumLabel() {
+    return facesSum;
+  }
+
+  /**
+   * Get the cards of hearts label.
+   * @return the cards of hearts label
+   */
+  public Label getCardsOfHearts() {
+    return cardsOfHearts;
+  }
+
+  /**
+   * Get the flush label.
+   * @return the flush label
+   */
+  public Label getFlush() {
+    return flush;
+  }
+
+  /**
+   * Get the queen of spades label.
+   * @return the queen of spades label
+   */
+  public Label getQueenOfSpades() {
+    return queenOfSpades;
+  }
+
+  /**
+   * Get the deal hand button.
+   * @return the deal hand button
+   */
+  public Button getDealHand() {
+    return dealHand;
+  }
+
+  /**
+   * Get the check hand button.
+   * @return the check hand button
+   */
+  public Button getCheckHand() {
+    return checkHand;
   }
 
 
