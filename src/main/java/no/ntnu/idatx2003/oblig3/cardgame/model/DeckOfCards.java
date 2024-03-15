@@ -44,17 +44,53 @@ public class DeckOfCards {
    */
   public HandOfCards dealHand(int n) {
     Collection<PlayingCard> hand = new ArrayList<PlayingCard>();
-    ArrayList<PlayingCard> temp = new ArrayList<>(cards); // Temporary copy of the deck
-    Random rand = new Random();
-    int bound = 52;
-    // Deal n cards
-    for (int i = 0; i < n; i++) {
-      int randomNumber = rand.nextInt(bound - i);
-      hand.add(cards.get(randomNumber));
-      cards.remove(randomNumber);
+    try {
+      if (n > 52 || n < 0) {
+        throw new IllegalArgumentException("Cannot deal a hand with more cards than the deck,"
+            + "or less than 0.");
+      }
+      else {
+        ArrayList<PlayingCard> temp = new ArrayList<>(cards); // Temporary copy of the deck
+        Random rand = new Random();
+        int bound = 52;
+        // Deal n cards
+        for (int i = 0; i < n; i++) {
+          int randomNumber = rand.nextInt(bound - i);
+          hand.add(cards.get(randomNumber));
+          cards.remove(randomNumber);
+        }
+        cards = temp; // Return the deck to its original state
+      }
     }
-    cards = temp; // Return the deck to its original state
+    catch (Exception e) {
+      e.printStackTrace();
+    }
     return new HandOfCards(hand);
+  }
+
+  /**
+   * Get all the cards in the deck.
+   *
+   * @return the cards
+   */
+  public ArrayList<PlayingCard> getCards() { return this.cards; }
+
+  /**
+   * Get the table of suits.
+   *
+   * @return the table of suits.
+   */
+  public char[] getSuit() {
+    return this.suit;
+  }
+
+  /**
+   * Get the table of faces.
+   *
+   * @return the table of faces.
+   */
+  public int[] getFaces() {
+    return this.face;
   }
 
 }

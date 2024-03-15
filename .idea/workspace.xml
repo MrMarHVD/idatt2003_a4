@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a9374d9-be2c-49df-a36b-1c2c135e4a02" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/no/ntnu/idatx2003/oblig3/cardgame/model/DeckOfCardsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/idatx2003/oblig3/cardgame/controller/CardGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/idatx2003/oblig3/cardgame/controller/CardGameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/idatx2003/oblig3/cardgame/controller/DisplayManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/idatx2003/oblig3/cardgame/controller/DisplayManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/idatx2003/oblig3/cardgame/model/HandOfCards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/idatx2003/oblig3/cardgame/model/HandOfCards.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/idatx2003/oblig3/cardgame/view/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/idatx2003/oblig3/cardgame/view/UserInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/ntnu/idatx2003/oblig3/cardgame/model/DeckOfCards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/ntnu/idatx2003/oblig3/cardgame/model/DeckOfCards.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,28 +35,107 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "dev",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15234174",
-    "project.structure.side.proportion": "0.4463668",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15234174&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.4463668&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager">
+}</component>
+  <component name="RunManager" selected="JUnit.DeckOfCardsTest.shouldDealHand">
+    <configuration name="DeckOfCardsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="idatx2003cardgame" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="no.ntnu.idatx2003.oblig3.cardgame.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="no.ntnu.idatx2003.oblig3.cardgame.model" />
+      <option name="MAIN_CLASS_NAME" value="no.ntnu.idatx2003.oblig3.cardgame.model.DeckOfCardsTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeckOfCardsTest.shouldCreateDeck" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="idatx2003cardgame" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="no.ntnu.idatx2003.oblig3.cardgame.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="no.ntnu.idatx2003.oblig3.cardgame.model" />
+      <option name="MAIN_CLASS_NAME" value="no.ntnu.idatx2003.oblig3.cardgame.model.DeckOfCardsTest" />
+      <option name="METHOD_NAME" value="shouldCreateDeck" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeckOfCardsTest.shouldDealHand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="idatx2003cardgame" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="no.ntnu.idatx2003.oblig3.cardgame.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="no.ntnu.idatx2003.oblig3.cardgame.model" />
+      <option name="MAIN_CLASS_NAME" value="no.ntnu.idatx2003.oblig3.cardgame.model.DeckOfCardsTest" />
+      <option name="METHOD_NAME" value="shouldDealHand" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeckOfCardsTest.shouldReturnFace" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="idatx2003cardgame" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="no.ntnu.idatx2003.oblig3.cardgame.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="no.ntnu.idatx2003.oblig3.cardgame.model" />
+      <option name="MAIN_CLASS_NAME" value="no.ntnu.idatx2003.oblig3.cardgame.model.DeckOfCardsTest" />
+      <option name="METHOD_NAME" value="shouldReturnFace" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeckOfCardsTest.shouldReturnSuit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="idatx2003cardgame" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="no.ntnu.idatx2003.oblig3.cardgame.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="no.ntnu.idatx2003.oblig3.cardgame.model" />
+      <option name="MAIN_CLASS_NAME" value="no.ntnu.idatx2003.oblig3.cardgame.model.DeckOfCardsTest" />
+      <option name="METHOD_NAME" value="shouldReturnSuit" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Oblig 3 [javafx:run]" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -88,6 +165,15 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.DeckOfCardsTest.shouldDealHand" />
+        <item itemvalue="JUnit.DeckOfCardsTest.shouldReturnFace" />
+        <item itemvalue="JUnit.DeckOfCardsTest.shouldReturnSuit" />
+        <item itemvalue="JUnit.DeckOfCardsTest" />
+        <item itemvalue="JUnit.DeckOfCardsTest.shouldCreateDeck" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -100,7 +186,9 @@
       <workItem from="1709812030888" duration="3730000" />
       <workItem from="1710407798676" duration="1160000" />
       <workItem from="1710408965800" duration="298000" />
-      <workItem from="1710409269281" duration="15160000" />
+      <workItem from="1710409269281" duration="15424000" />
+      <workItem from="1710429275606" duration="286000" />
+      <workItem from="1710491054747" duration="6114000" />
     </task>
     <servers />
   </component>
@@ -114,7 +202,27 @@
           <properties class="java.lang.IndexOutOfBoundsException" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/no/ntnu/idatx2003/oblig3/cardgame/model/DeckOfCardsTest.java</url>
+          <line>51</line>
+          <properties class="no.ntnu.idatx2003.oblig3.cardgame.model.DeckOfCardsTest" method="shouldDealHand">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Praktisk_Programmeringsoppgave$DeckOfCardsTest.ic" NAME="DeckOfCardsTest Coverage Results" MODIFIED="1710514652120" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>no.ntnu.idatx2003.oblig3.cardgame.model.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Praktisk_Programmeringsoppgave$DeckOfCardsTest_shouldReturnFace.ic" NAME="DeckOfCardsTest.shouldReturnFace Coverage Results" MODIFIED="1710516927769" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>no.ntnu.idatx2003.oblig3.cardgame.model.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Praktisk_Programmeringsoppgave$DeckOfCardsTest_shouldDealHand.ic" NAME="DeckOfCardsTest.shouldDealHand Coverage Results" MODIFIED="1710517560438" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>no.ntnu.idatx2003.oblig3.cardgame.model.*</FILTER>
+    </SUITE>
   </component>
 </project>
