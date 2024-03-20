@@ -14,9 +14,14 @@ import org.junit.jupiter.api.Test;
  */
 public class DeckOfCardsTest {
 
+  /**
+   * A deck of cards for testing.
+   */
   private DeckOfCards deck;
 
-
+  /**
+   * Instantiate the testing deck before each test.
+   */
   @BeforeEach
   void setUp() {
     this.deck = new DeckOfCards();
@@ -94,7 +99,7 @@ public class DeckOfCardsTest {
   }
 
   /**
-   * Ensure that exception is thrown when negative hand is dealth.
+   * Ensure that exception is thrown when negative hand is dealt.
    */
   @Test
   void shouldThrowExceptionWhenDealHandWithNegativeNumber() {

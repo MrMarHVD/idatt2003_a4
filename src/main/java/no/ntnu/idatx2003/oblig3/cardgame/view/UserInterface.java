@@ -105,6 +105,7 @@ public class UserInterface extends Application {
 
   /**
    * Start method for the application and UI.
+   *
    * @param primaryStage the stage
    */
   @Override

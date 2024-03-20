@@ -42,14 +42,13 @@ public class DeckOfCards {
    * @param n number of cards in the hand.
    * @return the resulting collection of cards.
    */
-  public HandOfCards dealHand(int n) {
+  public HandOfCards dealHand(int n) throws IllegalArgumentException {
     Collection<PlayingCard> hand = new ArrayList<PlayingCard>();
-    try {
-      if (n > 52 || n < 0) {
-        throw new IllegalArgumentException("Cannot deal a hand with more cards than the deck,"
-            + "or less than 0.");
-      }
-      else {
+
+    if (n > 52 || n < 0) {
+      throw new IllegalArgumentException("Cannot deal a hand with more cards than the deck,"
+          + "or less than 0.");
+    } else {
         ArrayList<PlayingCard> temp = new ArrayList<>(cards); // Temporary copy of the deck
         Random rand = new Random();
         int bound = 52;
@@ -61,10 +60,6 @@ public class DeckOfCards {
         }
         cards = temp; // Return the deck to its original state
       }
-    }
-    catch (Exception e) {
-      e.printStackTrace();
-    }
     return new HandOfCards(hand);
   }
 

@@ -11,12 +11,27 @@ import no.ntnu.idatx2003.oblig3.cardgame.view.UserInterface;
  */
 public class CardGameController {
 
+  /**
+   * The UI.
+   */
   private UserInterface ui;
 
+  /**
+   * The player's current hand.
+   */
   private HandOfCards playerHand;
 
+  /**
+   * The deck.
+   */
   private DeckOfCards deck;
 
+  /**
+   * Constructor.
+   *
+   * @param Ui the UI for this controller.
+   * @param deck the deck for this controller
+   */
   public CardGameController(UserInterface Ui, DeckOfCards deck) {
     this.ui = Ui;
     this.deck = deck;
@@ -30,8 +45,11 @@ public class CardGameController {
     ui.getDealHand().setOnAction(event -> {
         try {
           int handSize = Integer.parseInt(ui.getHandSize());
-          if (handSize <= 0) {
-            throw new IllegalArgumentException("Hand size must be greater than 0.");
+          if (handSize <= 4) {
+            throw new IllegalArgumentException("Hand size must be greater than 5.");
+          }
+          else if (handSize > 52) {
+            throw new IllegalArgumentException("Hand size cannot be greater than size of deck.");
           }
           playerHand = deck.dealHand(handSize);
         } catch (Exception e) {

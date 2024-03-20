@@ -13,8 +13,15 @@ import no.ntnu.idatx2003.oblig3.cardgame.view.UserInterface;
  */
 public class DisplayManager {
 
+  /**
+   * The UI object.
+   */
   private UserInterface ui;
 
+  /**
+   * Constructor
+   * @param ui UI for this DisplayManager
+   */
   public DisplayManager(UserInterface ui) {
     this.ui = ui;
   }
@@ -57,6 +64,11 @@ public class DisplayManager {
 
   }
 
+  /**
+   * Display an error to the user.
+   *
+   * @param e the error.
+   */
   public void displayError(Exception e) {
     Alert alert = new Alert(Alert.AlertType.ERROR);
     alert.setTitle("Error");

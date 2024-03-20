@@ -10,7 +10,14 @@ package no.ntnu.idatx2003.oblig3.cardgame.model;
  */
 public class PlayingCard {
 
+  /**
+   * Character representing the suit of the card.
+   */
   private final char suit; // 'S'=spade, 'H'=heart, 'D'=diamonds, 'C'=clubs
+
+  /**
+   * Integer representing the face of the card.
+   */
   private final int face; // a number between 1 and 13
 
   /**
